@@ -5,6 +5,7 @@ use anyhow::{Context, Result};
 use crate::Part;
 
 mod day01;
+mod day02;
 
 trait Day {
     fn one(&self, input: &str) -> Result<i64>;
@@ -18,7 +19,7 @@ pub struct Days {
 impl Days {
     pub fn new() -> Self {
         Self {
-            list: vec![Box::new(day01::Day01)],
+            list: vec![Box::new(day01::Day01), Box::new(day02::Day02)],
         }
     }
 
